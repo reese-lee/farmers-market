@@ -19,7 +19,8 @@
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.9",
     "react-dom": "^16.8.6",
-    "styled-jsx": "^3.2.1"
+    "styled-jsx": "^3.2.1",
+    "yarn": "^1.16.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
