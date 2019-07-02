@@ -276,7 +276,7 @@ export default function AvailableProduce() {
       {availableProduce.map((produce, index)=>
         <Produce month={produce.month}
           selection= {produce.selection}
-          />
+        />
       )}
 
     </div>
