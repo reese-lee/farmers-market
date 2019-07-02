@@ -15,6 +15,7 @@ const useStyles = makeStyles({
     alignItems: 'center',
     textAlign: 'center',
     margin: '0 auto',
+    opacity: 0.85,
   },
   image: {
     height: 300,
@@ -33,7 +34,9 @@ export default function Splash() {
   return (
     <div style = {backgroundImage} className={classes.image}>
       <div>
-        <Card className={classes.card}>Some Info Here</Card>
+        <Card className={classes.card}>
+          <h1>Lee & Bateman's Markets</h1>
+        </Card>
       </div>
     </div>
   );

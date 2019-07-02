@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-
+import Panel from './Panel';
 import Splash from './Splash';
 import AvailableProduce from './AvailableProduce';
 import ScheduleFeed from './ScheduleFeed';
@@ -25,21 +25,21 @@ export default function CenteredGrid() {
 
   return (
     <div>
-    <div className={classes.root}>
-      <Splash/>
+      <div className={classes.root}>
+        <Splash/>
 
+      </div>
+      <div>
+        <Grid container spacing={12}>
+          <Grid item xs={6}>
+            <Paper className={classes.paper}><AvailableProduce/></Paper>
+          </Grid>
+          <Grid item xs={6}>
+            <Paper className={classes.paper}><ScheduleFeed/></Paper>
+          </Grid>
+        </Grid>
+      </div>
     </div>
-    <div>
-    <Grid container spacing={12}>
-      <Grid item xs={6}>
-        <Paper className={classes.paper}><AvailableProduce/></Paper>
-      </Grid>
-      <Grid item xs={6}>
-        <Paper className={classes.paper}><ScheduleFeed/></Paper>
-      </Grid>
-    </Grid>
-    </div>
-  </div>
 
   );
 }

@@ -270,15 +270,22 @@ const availableProduce = [
   }
 ];
 
+// export default function CustomizedExpansionPanels() {
+
 export default function AvailableProduce() {
+  const [expanded, setExpanded] = React.useState('panel1');
+
+  const handleChange = panel => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+
   return (
-    <div className="fruits">
+    <div>
       {availableProduce.map((produce, index)=>
         <Produce month={produce.month}
           selection= {produce.selection}
         />
       )}
-
     </div>
   );
 }
