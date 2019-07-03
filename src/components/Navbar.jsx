@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -23,10 +23,10 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
     textDecoration: 'none',
     '&:hover': {
-      color: 'red',
+      color: 'rgba(255,255,255,0.7)',
     },
     '&:active': {
-      color: 'black',
+      color: 'rgba(255,95,193,1)',
     },
   },
   spacing:{

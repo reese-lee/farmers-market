@@ -10,9 +10,11 @@ function Error404(props){
       <h3>Would you like to return <Link to="/">home</Link> instead?</h3>
     </div>
   );
+}
+Error404.propTypes = {
+  location: PropTypes.object
+};
 
-  Error404.propTypes = {
-    location: PropTypes.object
-  };
+
 
 export default Error404;
