@@ -25,9 +25,9 @@ export default function CenteredGrid() {
 
   return (
     <div>
-      <div className={classes.root}>
-        <Splash/>
 
+      <div>
+        <Panel/>
       </div>
       <div>
         <Grid container spacing={12}>
