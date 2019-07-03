@@ -6,19 +6,40 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
+
   },
   menuButton: {
     marginRight: theme.spacing(2),
   },
   title: {
     flexGrow: 1,
+
   },
+  clicky: {
+    color: 'white',
+    textDecoration: 'none',
+    '&:hover': {
+      color: 'red',
+    },
+    '&:active': {
+      color: 'black',
+    },
+  },
+  spacing:{
+    width: '150px',
+    display: 'flex',
+    flexFlow: 'row',
+    justifyContent: 'spaceBetween',
+    alignItems: 'center',
+  }
 }));
+
+
+
 
 export default function ButtonAppBar() {
   const classes = useStyles();
@@ -31,7 +52,16 @@ export default function ButtonAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            <Link to="/">Home</Link> | <Link to="/produce">See Produce</Link>
+            <div className={classes.spacing}>
+              <div className={classes.spacing}>
+                <Link to="/" style={{ textDecoration: 'none' }}><a className={classes.clicky}>Home</a></Link>
+              </div>
+              <div className={classes.spacing}>
+                <Link to="/produce" style={{ textDecoration: 'none' }}><a className={classes.clicky}>Produce</a></Link>
+              </div>
+
+            </div>
+
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
