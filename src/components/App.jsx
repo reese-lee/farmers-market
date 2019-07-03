@@ -5,7 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 import NewPage from './NewPage';
 import AvailableProduce from './AvailableProduce';
 import Splash from './Splash';
-
+import Error404 from './Error404';
 
 function App() {
   return(
@@ -15,6 +15,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={Splash} />
         <Route path='/produce' component={AvailableProduce}/>
+        <Route component={Error404}/>
       </Switch>
     </div>
   );
